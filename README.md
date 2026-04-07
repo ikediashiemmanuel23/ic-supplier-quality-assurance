@@ -1,6 +1,6 @@
 <img width="1327" height="534" alt="Supplier" src="https://github.com/user-attachments/assets/d174e543-5d9c-4910-b457-3bf5a25a0736" />
 
-This project provides a comprehensive insight on suppliers' performance highlighting how key metrics such as defect quantity and downtime hours impacts overall operations. The aim was to transform an industrial static data to create a Prescriptive Engine that justifies automated strategic actions and closes global performance gaps.
+This project provides a comprehensive insight on suppliers' performance and materials' Quality Assurance (QA) highlighting how key metrics such as defect quantity and downtime hours impacts overall operations. The aim was to transform an industrial static data to create a Prescriptive Engine that justifies automated strategic actions and closes global performance gaps.
 
 Materials & Methods: The report utilized Microsoft Excel for initial data structuring and Power BI as the primary analytical environment. The methodology followed a chronological progression:
 
