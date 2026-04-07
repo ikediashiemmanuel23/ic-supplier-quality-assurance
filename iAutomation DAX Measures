@@ -1,0 +1,61 @@
+// Measure to track the **Dead on Arrival (DOA)** materials 
+DOA Impact = 
+        VAR DOA = CALCULATE(
+                          COUNT(iAutomation[Defect_Type_ID]), KEEPFILTERS('Defect Type'[Defect Type] = "DOA"))
+                          VAR DEFECT_TYPE = CALCULATE(COUNT(iAutomation[Defect_Type_ID]))
+                          RETURN DIVIDE(DOA, DEFECT_TYPE
+                              )
+
+// Measure to Calculate the **Dead on Arrival (DOA) Threshold** of materials 
+DOA Threshold = CALCULATE(
+                        [DOA Impact], ALL(iAutomation)
+                        )
+
+// Measure to Calculate the **Defect Quantity Threshold** of materials 
+QtyThreshold = CALCULATE(
+                        MEDIANX(ALL(iAutomation), 'Defect Quantity'[Defect Qty]), 
+                        ALL(iAutomation)
+                        )
+
+// Measure to Calculate the **Baseline Recovery Rate** of materials 
+BaseLine or Avg. Recover Rate = CALCULATE(
+                            AVERAGEX(ALL('iAutomation'), 'Recover Rate'[Recover Rate]), 
+                            ALL(iAutomation)
+                            )
+
+// Measure to track **Material Risk Category** of individual Supplier
+Material Risk Category = 
+        VAR _Rate = 'Recover Rate'[Recover Rate]
+        VAR _DefectQty = 'Defect Quantity'[Defect Qty]
+        VAR _Baseline = 'Recover Rate'[BaseLine or Avg. Recover Rate]
+        VAR _QtyThreshold = 'Defect Quantity'[QtyThreshold]
+        RETURN 
+        SWITCH(TRUE,
+                    _Rate > _Baseline && _DefectQty > _QtyThreshold, "High Risk", 
+                    _Rate > _Baseline && _DefectQty <= _QtyThreshold, "Medium Risk (Audit)",
+                    _Rate <= _Baseline && _DefectQty > _QtyThreshold, "Medium Risk (High Frequency)", 
+                    "Low Risk"
+                )
+
+// Measure to track **Performance Gap** of Suppliers' and Plants'
+Performance Gap = 
+        VAR VR = 'Recover Rate'[Recover Rate]
+        VAR BL = 'Recover Rate'[BaseLine or Avg. Recover Rate]
+        VAR Diff = DIVIDE(VR - BL, BL)
+        VAR _Diff = SWITCH(TRUE,
+                            DIFF > 0, UNICHAR(9650) & " " & FORMAT(Diff, "0.00%") & " " & "Inefficient",
+                            DIFF < 0, UNICHAR(9660) & " " & FORMAT(Diff, "0.00%") & " " & "Efficient",
+                            FORMAT(Diff, "0.00%") & " " & "Target"
+        )
+        RETURN _Diff
+
+// Measure to determine **Stractegic Action** on suuppliers' and materials'
+Strategic Action = 
+        VAR _Rate = 'Recover Rate'[Recover Rate]
+        VAR _DOA = 'Defect Type Measure'[DOA Impact]
+        VAR _Baseline = 'Recover Rate'[BaseLine or Avg. Recover Rate]
+        VAR _DOAThreshold = [DOA Threshold]
+        RETURN SWITCH(TRUE, 
+                        _Rate > _Baseline && _DOA > _DOAThreshold, "Bad Quality & Bad Support.",
+                        _Rate > _Baseline && _DOA <= _DOAThreshold, "Poor Training",
+                         _Rate <= _Baseline, "Standard Performance")
