@@ -60,4 +60,3 @@ Strategic Action =
                         _Rate > _Baseline && _DOA <= _DOAThreshold, "Poor Training",
                          _Rate <= _Baseline, "Standard Performance")
 
-$$\text{\% Downtime Reduction} = \frac{\text{Current Hours} (6,550) - \text{New Hours} (4490)}{\text{Current Hours} (6,550)} \times 100 = 31.45\%$$
