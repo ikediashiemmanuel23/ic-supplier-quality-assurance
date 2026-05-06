@@ -1,5 +1,7 @@
 <img width="1366" height="535" alt="Supplier" src="https://github.com/user-attachments/assets/9a7ab415-5c5f-4c41-bb77-997407843c7b" />
 
+
+
 # ABSTRACT
 This project provides a comprehensive insight on suppliers' performance and materials' Quality Assurance (QA) highlighting how key metrics such as defect quantity and downtime hours impacts overall operations. The aim was to transform an industrial static data to create a Prescriptive Engine that justifies automated strategic actions and closes global performance gaps.
 
