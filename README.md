@@ -16,6 +16,6 @@ The project successfully transitioned raw data into a strategic roadmap by utili
 
 It is recommended that this prescriptive logic be scaled across all supply chain tiers to maximize cost avoidance, operational precision and  provide understanding of material risk levels.
 
-[View the live interactive report] - https://app.powerbi.com/view?r=eyJrIjoiZGQ5M2M3YzItYjE1NS00MTBmLThhOWQtYWI0Y2FkYTUzMzdhIiwidCI6IjMyMGFhMGNkLWZlZWEtNDlhYy1iMWYzLTQyNzBiYmQ1MjAyMSJ9
+[View the live interactive report] - https://app.powerbi.com/view?r=eyJrIjoiOTg1YjMyZjYtYTMzOC00YWI0LWEyOTktMGQ1M2UxYzNhYmMwIiwidCI6IjMyMGFhMGNkLWZlZWEtNDlhYy1iMWYzLTQyNzBiYmQ1MjAyMSJ9&pageName=8c3c8d93ffe993aa112d
 
 
