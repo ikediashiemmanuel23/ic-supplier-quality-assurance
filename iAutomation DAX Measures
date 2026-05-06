@@ -49,7 +49,7 @@ Performance Gap =
         )
         RETURN _Diff
 
-// Measure to determine **Stractegic Action** on suuppliers' and materials'
+// Measure to determine **Stractegic Action** on suppliers' and materials'
 Strategic Action = 
         VAR _Rate = 'Recover Rate'[Recover Rate]
         VAR _DOA = 'Defect Type Measure'[DOA Impact]
@@ -59,3 +59,5 @@ Strategic Action =
                         _Rate > _Baseline && _DOA > _DOAThreshold, "Bad Quality & Bad Support.",
                         _Rate > _Baseline && _DOA <= _DOAThreshold, "Poor Training",
                          _Rate <= _Baseline, "Standard Performance")
+
+$$\text{\% Downtime Reduction} = \frac{\text{Current Hours} (6,550) - \text{New Hours} (4490)}{\text{Current Hours} (6,550)} \times 100 = 31.45\%$$
