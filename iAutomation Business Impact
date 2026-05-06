@@ -1,25 +1,25 @@
-1. Percentage Downtime Reduction
+Percentage Downtime Reduction
 
 Formula: ((Current Hours - New Hours) / Current Hours) × 100
 
 Calculation: ((6,550 - 4,490) / 6,550) × 100 = 331.5% Reduction
 
 
-2. The Global Efficiency Increase
+The Global Efficiency Increase
 
 Formula: ((Baseline Recovery Rate - Current Average Recovery Rate) / Baseline Recovery Rate) × 100
 
 Calculation: ((1.37 - 0.14) / 1.37) × 100 = 89.8% Global Efficiency Increase
 
 
-3. Total Downtime Saved
+Total Downtime Saved
 
 Formula: Current Hours - New Hours
 
 Calculation: 6,550 - 4,490 = 2,060 Hours Saved
 
 
-4. Total Cost Saved (Projected)
+##Total Cost Saved (Projected)
 
 Formula: Hours Saved × Hourly Cost ($200)
 
