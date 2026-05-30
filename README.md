@@ -17,7 +17,7 @@ Advanced Visualization: Implementing Temporal Heatmaps and Location-Based Drill-
 
 Strategic Logic: Developing custom DAX measures to automate recommendations for site-level training versus vendor audits.
 
-[View the live interactive report] - https://app.powerbi.com/view?r=eyJrIjoiOTg1YjMyZjYtYTMzOC00YWI0LWEyOTktMGQ1M2UxYzNhYmMwIiwidCI6IjMyMGFhMGNkLWZlZWEtNDlhYy1iMWYzLTQyNzBiYmQ1MjAyMSJ9&pageName=8c3c8d93ffe993aa112d
+[View the live interactive report](https://app.powerbi.com/view?r=eyJrIjoiOTg1YjMyZjYtYTMzOC00YWI0LWEyOTktMGQ1M2UxYzNhYmMwIiwidCI6IjMyMGFhMGNkLWZlZWEtNDlhYy1iMWYzLTQyNzBiYmQ1MjAyMSJ9&pageName=8c3c8d93ffe993aa112d)
 
 The project successfully transitioned raw data into a strategic roadmap by utilizing advanced drill-throughs for a seamless transition between report layers, significantly increasing decision-making efficiency and reducing "Time-to-Insight."
 
